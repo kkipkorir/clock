@@ -1,38 +1,106 @@
+/* Import Google Fonts for clock-like font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* General App styling */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* Styling for the Title */
+h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for Length Component */
+.label-holder {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the label text */
+#break-label p, #session-label p {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: #555;
+}
+#break-label, #session-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  text-align: center;
+}
+
+#break-label img, #session-label img {
+  cursor: pointer;
+}
+
+#break-label img, #session-label img, #break-length, #session-length {
+  margin-top: 5px;
+}
+
+/* Align the image and span horizontally */
+#break-label span, #session-label span {
+  display: inline-block;
+  font-size: 24px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+/* Styling for Timer Display */
+.display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 4px solid #ccc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+#timer-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#time-left {
+  font-size: 48px;
+  font-family: 'Orbitron', sans-serif;  /* Clock-like font */
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* Control Buttons styling */
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.controls-container img {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+/* Add some hover effect for buttons */
+.controls-container img:hover {
+  transform: scale(1.1);
 }
